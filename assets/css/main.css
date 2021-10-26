@@ -1,0 +1,114 @@
+:root {
+  --background-primary: #ecf0f1;
+  --background-secondary: #e5e5e5;
+  --background-footer: #636789;
+  --color-one: #ffffff;
+  --color-two: #636363;
+  --color-hover-one: #1766ff;
+  --color-hover-two: #636789;
+  --color-hover-three: #a6b6cc;
+  --color-font-primary: #3f4359;
+  --color-font-secondary: #636789;
+  --color-font-one: #767676;
+  --color-font-two: #27ae60;
+  --line-divisor-primary: #636789;
+  --line-divisor-secondary: #e5e5e5;
+  --color-selections: #4d4d57;
+  --color-selections-two: #c3c1d1;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px !important;
+}
+
+.btn-next {
+  font: 500 20px "Rubik", sans-serif !important;
+  text-decoration: none !important;
+  background: var(--background-primary);
+  color: var(--color-font-two) !important;
+  border: 2px solid rgb(31, 32, 68);
+  position: relative;
+  padding: 12px 30px 17px 35px;
+  text-align: center;
+  width: fit-content;
+}
+
+.btn-next::after,
+.btn-next::before {
+  background-color: rgb(31, 32, 68);
+  bottom: -6px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: -7px;
+}
+
+.btn-next:hover::before {
+  right: -2px;
+  transition: 0.5s;
+}
+
+.btn-next:hover::after {
+  top: -2px;
+  transition: 0.5s;
+}
+
+.btn-next::after {
+  top: 15px;
+  transition: width 0.2s ease 0s;
+  width: 6px;
+}
+
+.btn-next::before {
+  height: 6px;
+  right: 30px;
+  transition: height 0.2s ease 0s;
+}
+
+.btn-next span {
+  position: relative;
+}
+
+.btn-next span:hover {
+  color: var(--color-hover-one);
+}
+
+.btn-next span::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--color-hover-one);
+  position: absolute;
+  left: 0;
+  bottom: -0.01rem;
+  transition: width 0.3s;
+}
+
+.btn-next span:hover::after {
+  width: 100%;
+}
+
+.main-onlys h1 {
+    font: 900 40px 'Overpass', sans-serif;
+    color: var(--color-font-primary);
+    text-align: center;
+
+}
+
+.main-onlys p {
+    font: 400 19px 'Heebo', sans-serif;
+    color: var(--color-font-one);
+    text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+    .main-onlys p {
+        font-size: 15px;
+    }
+
+    .main-onlys br {
+        display: none;
+    }
+}
